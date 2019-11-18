@@ -6,6 +6,8 @@ import algochess.Ubicacion.StrategyDisponibilidad.StrategyDisponibilidad;
 import algochess.Ubicacion.StrategyDisponibilidad.StrategyLibre;
 import algochess.Ubicacion.StrategyDisponibilidad.StrategyOcupado;
 
+import java.util.ArrayList;
+
 public class Casillero { //TODO :falta  --- incompatibilidad posicion-casillero
 
     private Posicion posicion;
@@ -68,5 +70,22 @@ public class Casillero { //TODO :falta  --- incompatibilidad posicion-casillero
         return posicion.distanciaA(this.posicion);
     }
     public Posicion posicion(){return this.posicion;}
+
+    public Pieza getPieza(){
+        return this.pieza;
+    }
+    //Te trae los casilleros vecinos en las direcciones este y oeste
+    public ArrayList<Casillero> vecinos(){
+        ArrayList<Casillero>vecinos = new ArrayList<Casillero>();
+        Direccion este = new Direccion(1,0);
+        Direccion oeste = new Direccion(-1,0);
+        Casillero vecino1 = this.siguiente(este);
+        Casillero vecino2 = this.siguiente(oeste);
+        vecinos.add(vecino1);
+        vecinos.add(vecino2);
+        return vecinos;
+
+    }
+
 
 }

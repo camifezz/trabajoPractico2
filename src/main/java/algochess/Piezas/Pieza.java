@@ -1,6 +1,7 @@
 package algochess.Piezas;
 
 import algochess.Armas.*;
+import algochess.Batallon;
 import algochess.Ubicacion.*;
 import algochess.Equipos.*;
 
@@ -15,7 +16,6 @@ public abstract class Pieza { //TODO :falta
         this.vida = new Vida(vida);
         this.equipo = equipo;
     }
-
 
     // Se ubica en el mapa
     public Pieza ubicarCon(Equipo equipo){
@@ -70,6 +70,11 @@ public abstract class Pieza { //TODO :falta
         return this.casillero.posicion();
     }
 
+    //Solo implementan este metodo los Soldados
+    public abstract void unirseABatallon(Batallon batallon);
+
+    // Metodo que verifica si dos piezas son del mismo equipo
+    public abstract boolean soyAliado(Equipo equipo);
 }
 
 

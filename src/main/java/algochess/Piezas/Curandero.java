@@ -1,6 +1,7 @@
 package algochess.Piezas;
 
 import algochess.Armas.ArmaCurandero;
+import algochess.Batallon;
 import algochess.Equipos.Equipo;
 import algochess.FactoryConstantes;
 import algochess.Ubicacion.Direccion;
@@ -19,6 +20,9 @@ public class Curandero extends Pieza implements Movible {
     public void mover(Direccion direccion){
         this.casillero.siguiente(direccion).agregarPieza(this);
     }
+
+    @Override
+    public void unirseABatallon(Batallon batallon){}
 
 }
 

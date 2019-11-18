@@ -24,7 +24,7 @@ public class Direccion {
     private int sentidoHorizontal;
     private int sentidoVertical;
 
-    private Direccion(int sentidoHorizontal, int sentidoVertical) {
+    Direccion(int sentidoHorizontal, int sentidoVertical) {
         this.sentidoHorizontal = sentidoHorizontal;
         this.sentidoVertical = sentidoVertical;
     }

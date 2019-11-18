@@ -1,6 +1,7 @@
 package algochess.Piezas;
 
 import algochess.Armas.ArmaCatapulta;
+import algochess.Batallon;
 import algochess.Equipos.Equipo;
 import algochess.FactoryConstantes;
 
@@ -19,5 +20,7 @@ public class Catapulta extends Pieza {
     public void curarse(float vida){
 
     }
+    @Override
+    public void unirseABatallon(Batallon batallon){}
 }
 

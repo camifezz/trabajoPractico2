@@ -2,6 +2,7 @@ package algochess.Piezas;
 
 import algochess.Armas.ArmaArcoJinete;
 import algochess.Armas.ArmaEspadaJinete;
+import algochess.Batallon;
 import algochess.Equipos.Equipo;
 import algochess.FactoryConstantes;
 import algochess.Ubicacion.Direccion;
@@ -27,4 +28,7 @@ public class Jinete extends Pieza implements Movible{
     public void mover(Direccion direccion){
         this.casillero.siguiente(direccion).agregarPieza(this);
     }
+
+    @Override
+    public void unirseABatallon(Batallon batallon){}
 }
