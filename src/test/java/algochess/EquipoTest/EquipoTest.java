@@ -58,4 +58,18 @@ class EquipoTest {
 
         assertThrows(CasilleroEnemigoException.class, ()-> rojo.ubicarCon(azul, pieza));
     }
+    //Batallon
+    @Test
+    void testEsAliadoDevuelveTrueCuandoDosPiezasSonDelMismoEquipo(){
+        Pieza pieza = new Soldado(new EquipoRojo());
+        Equipo rojo = new EquipoRojo();
+        assertTrue(pieza.soyAliado(rojo));
+    }
+
+    @Test
+    void testEsAliadoDevuelveFalseCuandoDosPiezasSonDeDiferenteEquipo(){
+        Pieza pieza = new Soldado(new EquipoRojo());
+        Equipo azul = new EquipoAzul();
+        assertFalse(pieza.soyAliado(azul));
+    }
 }

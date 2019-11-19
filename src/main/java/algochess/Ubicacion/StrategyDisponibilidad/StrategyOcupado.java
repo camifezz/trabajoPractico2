@@ -10,4 +10,10 @@ public class StrategyOcupado implements StrategyDisponibilidad {
         throw new CasilleroOcupadoException("Casillero Ocupado");
     }
 
+    @Override
+    public void quemar(double danio, Pieza pieza) {
+        pieza.quitarVida(danio);
+
+    }
+
 }

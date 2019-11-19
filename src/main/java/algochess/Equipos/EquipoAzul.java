@@ -24,6 +24,15 @@ public class EquipoAzul implements Equipo {
     public Pieza ubicarCon(EquipoRojo equipo, Pieza pieza){
         throw new CasilleroEnemigoException("Casillero diferente equipo");}
 
+    public boolean soyAliado(Equipo equipo) {
+        return equipo.soyAliado(this);
+    }
+    public boolean soyAliado(EquipoAzul equipo){
+        return true ;
+    }
+    public boolean soyAliado(EquipoRojo equipo){
+        return false;
+    }
 
 
 }

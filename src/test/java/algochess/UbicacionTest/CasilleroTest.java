@@ -281,4 +281,6 @@ class CasilleroTest {
 
         assertEquals(1.00,casillero.calcularDanio(rojo));
     }
+
+
 }

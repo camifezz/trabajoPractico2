@@ -9,4 +9,9 @@ public class StrategyLibre implements StrategyDisponibilidad {
         casillero.asignarPieza(pieza);
     }
 
+    @Override
+    public void quemar(double danio, Pieza pieza) {
+
+    }
+
 }

@@ -11,5 +11,8 @@ public interface  Equipo { //2 implementaciones
     Pieza ubicarCon(Equipo equipo, Pieza pieza);
     Pieza ubicarCon(EquipoAzul equipo, Pieza pieza);
     Pieza ubicarCon(EquipoRojo equipo, Pieza pieza);
+    boolean soyAliado(Equipo equipo);
+    boolean soyAliado(EquipoRojo equipo);
+    boolean soyAliado(EquipoAzul equipo);
 }
 

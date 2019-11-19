@@ -23,5 +23,17 @@ public class EquipoRojo implements Equipo {
         throw new CasilleroEnemigoException("Casillero diferente equipo");
     }
 
+    public boolean soyAliado(Equipo equipo) {
+        return equipo.soyAliado(this);
+    }
+    public boolean soyAliado(EquipoAzul equipo){
+        return false;
+    }
+    public boolean soyAliado(EquipoRojo equipo){
+        return true;
+    }
+
+
+
 
 }

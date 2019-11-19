@@ -22,5 +22,10 @@ public class Catapulta extends Pieza {
     }
     @Override
     public void unirseABatallon(Batallon batallon){}
+
+    @Override
+    public boolean soyAliado(Equipo equipo) {
+        return this.equipo.soyAliado(equipo);
+    }
 }
 
