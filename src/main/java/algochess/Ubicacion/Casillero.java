@@ -84,6 +84,7 @@ public class Casillero { //TODO :falta  --- incompatibilidad posicion-casillero
     public void quemado(){
         this.estado = new StrategyQuemado();
     }
+
     public void prenderFuego(double danio){
         this.estado.prenderFuego(danio,this);
     }
@@ -95,7 +96,7 @@ public class Casillero { //TODO :falta  --- incompatibilidad posicion-casillero
 
     }
 
-    private void propagarDanio(double danio) {
+    public void propagarDanio(double danio) {
         ArrayList<Casillero>vecinos = this.vecinos();
         for(Casillero casilleroVecino:vecinos){
             casilleroVecino.prenderFuego(danio);
@@ -109,33 +110,22 @@ public class Casillero { //TODO :falta  --- incompatibilidad posicion-casillero
     //Te trae los vecinos en todas las direcciones
     public ArrayList<Casillero> vecinos(){
         ArrayList<Casillero>vecinos = new ArrayList<Casillero>();
-       Direccion norte = new Direccion(0, 1);
-       Direccion  sur = new Direccion(0, -1);
-       Direccion este = new Direccion(1, 0);
-       Direccion oeste = new Direccion(-1, 0);
-       Direccion norOeste = new Direccion(-1,1);
-       Direccion norEste = new Direccion(1,1);
-       Direccion surOeste = new Direccion(-1,-1);
-       Direccion surEste = new Direccion(1,-1);
-       vecinos.add(this.siguiente(norte));
-       vecinos.add(this.siguiente(sur));
-       vecinos.add(this.siguiente(este));
-       vecinos.add(this.siguiente(oeste));
-       vecinos.add(this.siguiente(norOeste));
-       vecinos.add(this.siguiente(surOeste));
-       vecinos.add(this.siguiente(norEste));
-       vecinos.add(this.siguiente(surEste));
+       vecinos.add(this.siguiente(Direccion.norte()));
+       vecinos.add(this.siguiente(Direccion.sur()));
+       vecinos.add(this.siguiente(Direccion.este()));
+       vecinos.add(this.siguiente(Direccion.surOeste()));
+       vecinos.add(this.siguiente(Direccion.norOeste()));
+       vecinos.add(this.siguiente(Direccion.norEste()));
+       vecinos.add(this.siguiente(Direccion.oeste()));
+       vecinos.add(this.siguiente(Direccion.surEste()));
        return vecinos;
-
     }
 
     //Te trae las piezas vecinas en las direcciones este y oeste es para batallon
     public ArrayList<Pieza> vecinas(){
         ArrayList<Pieza>vecinas = new ArrayList<Pieza>();
-        Direccion este = new Direccion(1,0);
-        Direccion oeste = new Direccion(-1,0);
-        Casillero vecino1 = this.siguiente(este);
-        Casillero vecino2 = this.siguiente(oeste);
+        Casillero vecino1 = this.siguiente(Direccion.este());
+        Casillero vecino2 = this.siguiente(Direccion.oeste());
         vecinas.add(vecino1.getPieza());
         vecinas.add(vecino2.getPieza());
         return vecinas;
