@@ -64,6 +64,8 @@ public abstract class Pieza { //TODO :falta
         this.casillero = casillero;
     }
 
+    public Casillero getCasillero(){return this.casillero;}
+
 
     // Posicion para tests
     public Posicion posicion(){

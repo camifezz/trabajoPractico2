@@ -131,7 +131,15 @@ public class Casillero { //TODO :falta  --- incompatibilidad posicion-casillero
         return vecinas;
     }
 
+    public void terminoElAtaque(){
+        this.noQuemado();
+        this.propagarFinDelAtaque();
+    }
 
-
-
+    public void propagarFinDelAtaque() {
+        ArrayList<Casillero>vecinos = this.vecinos();
+        for(Casillero casilleroVecino:vecinos){
+            casilleroVecino.terminoElAtaque();
+        }
+    }
 }

@@ -281,7 +281,7 @@ class CasilleroTest {
 
         assertEquals(1.00,casillero.calcularDanio(rojo));
     }
-//
+
 //    @Test
 //    public void testCasilleroPropagaDanioASusVecinos(){
 //        Equipo equipo = new EquipoRojo();
@@ -298,6 +298,9 @@ class CasilleroTest {
 //        casillero.agregarTablero(tablero);
 //        casillero2.agregarTablero(tablero);
 //        casillero3.agregarTablero(tablero);
+//        pieza.asignarCasillero(casillero);
+//        pieza2.asignarCasillero(casillero2);
+//        pieza3.asignarCasillero(casillero3);
 //        casillero.ubicar(pieza);
 //        casillero2.ubicar(pieza2);
 //        casillero3.ubicar(pieza3);
