@@ -281,6 +281,28 @@ class CasilleroTest {
 
         assertEquals(1.00,casillero.calcularDanio(rojo));
     }
-
-
+//
+//    @Test
+//    public void testCasilleroPropagaDanioASusVecinos(){
+//        Equipo equipo = new EquipoRojo();
+//        Tablero tablero = new Tablero();
+//        Posicion posicion1 = new Posicion(10,10);
+//        Posicion posicion2 = new Posicion(10,11);
+//        Posicion posicion3 = new Posicion(10,15);
+//        Casillero casillero = new Casillero(posicion1,equipo);
+//        Casillero casillero2 = new Casillero(posicion2,equipo);
+//        Casillero casillero3 = new Casillero(posicion3,equipo);
+//        Pieza pieza = new Soldado(equipo) ;
+//        Pieza pieza2 = new Soldado(equipo) ;
+//        Pieza pieza3 = new Soldado(equipo) ;
+//        casillero.agregarTablero(tablero);
+//        casillero2.agregarTablero(tablero);
+//        casillero3.agregarTablero(tablero);
+//        casillero.ubicar(pieza);
+//        casillero2.ubicar(pieza2);
+//        casillero3.ubicar(pieza3);
+//        casillero.propagarDanio(12);
+//    assertEquals(92,pieza2.vida());
+//
+//    }
 }
